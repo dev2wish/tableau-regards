@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de regards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tableau de regards</h1>
+
+    <table class="regards-table">
+        <thead>
+            <tr>
+                <th>Regard</th>
+                <th>Points à vérifier</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1er Regard</td>
+                <td>
+                    <ul>
+                        <li>Analyse de la Zone d'intervention</li>
+                        <li>Vérification infos départ</li>
+                        <li>Vérification nombre de victimes</li>
+                        <li>Vérifiction moyens suffisant</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>2ème Regard</td>
+                <td>
+                    <ul>
+                        <li>Recherche urgence vitales :
+                            <ul>
+                                <li>AC</li>
+                                <li>Hémorragie</li>
+                                <li>OVA</li>
+                                <li>Infarctus</li>
+                            </ul>
+                        </li>
+                        <li>Soustraire la victime au danger</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>3ème Regard</td>
+                <td>
+                    <ul>
+                        <li>Vérifications fonctions vitales :
+                            <ul>
+                                <li>Respiratoire :
+                                    <ul>
+                                        <li><span class="tooltip" data-tooltip="Fréquence Cardiaque">FC</span></li>
+                                        <li><span class="tooltip" data-tooltip="Saturation en Oxygène">SpO2</span></li>
+                                    </ul>
+                                </li>
+                                <li>Circulatoire :
+                                    <ul>
+                                        <li><span class="tooltip" data-tooltip="Fréquence Cardiaque">FC</span></li>
+                                        <li><span class="tooltip" data-tooltip="Tension Artérielle">TA</span></li>
+                                        <li><span class="tooltip" data-tooltip="Temps de Recoloration Cutané">TRC</span></li>
+                                    </ul>
+                                </li>
+                                <li>Neurologique :
+                                    <ul>
+                                        <li>Vérification conscience</li>
+                                        <li>Repérage espace/temps</li>
+                                        <li><span class="glasgow-trigger">YVM (Score glasgow)</span></li>
+                                        <li>Glycémie</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>4ème Regard</td>
+                <td>
+                    <ul>
+                        <li>Mesures restante et complémentaire</li>
+                        <li>Questions :
+                            <ul>
+                                <li>MHTAF :
+                                    <ul>
+                                        <li>Maladie(-s)</li>
+                                        <li>Hospitalisations(-s)</li>
+                                        <li>Traitement(-s)</li>
+                                        <li>Alergie(-s)</li>
+                                        <li>Facteur(-s) risque</li>
+                                    </ul>
+                                </li>
+                                <li>PQRST :
+                                    <ul>
+                                        <li>Provoqué par ?</li>
+                                        <li>Qualité (description de la douleur) ?</li>
+                                        <li>Région ?</li>
+                                        <li>Symptôme ?</li>
+                                        <li>Temps ?</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="copyright">
+        <p>© 2024 - Créé par Nathan Eichert</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="glasgowModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Score de Glasgow (YVM)</h2>
+            <table class="glasgow-table">
+                <thead>
+                    <tr>
+                        <th>Réponse oculaire</th>
+                        <th>Réponse verbale</th>
+                        <th>Réponse motrice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nulle <span class="score">1</span></td>
+                        <td>Nulle <span class="score">1</span></td>
+                        <td>Nulle <span class="score">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>À la douleur <span class="score">2</span></td>
+                        <td>Incompréhensible <span class="score">2</span></td>
+                        <td>Extension stéréotypée <span class="score">2</span></td>
+                    </tr>
+                    <tr>
+                        <td>À la demande <span class="score">3</span></td>
+                        <td>Inappropriée <span class="score">3</span></td>
+                        <td>Flexion stéréotypée <span class="score">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>Spontanée <span class="score">4</span></td>
+                        <td>Confuse <span class="score">4</span></td>
+                        <td>Évitement <span class="score">4</span></td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Normale <span class="score">5</span></td>
+                        <td>Orientée <span class="score">5</span></td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Aux ordres <span class="score">6</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="glasgow-info">Score total = Y + V + M (entre 3 et 15)</p>
+        </div>
+    </div>
+</body>
+</html>
